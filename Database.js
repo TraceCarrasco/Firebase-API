@@ -3,8 +3,8 @@
  * @param baseReference - "____/..../"
  */ 
 function Database(baseReference) {
-    this.refString = baseReference;
-    this.ref = firebase.database().ref(baseReference);
+    this.refString = baseReference + "/";
+    this.ref = firebase.database().ref(this.refString);
 }
 
 /*
@@ -12,8 +12,8 @@ function Database(baseReference) {
  * @param newReference - "____/..../"
  */ 
 Database.prototype.ChangeReference = function(newReference) {
-    this.refString = newReference;
-    this.ref = firebase.database().ref(newReference);
+    this.refString = newReference + "/";
+    this.ref = firebase.database().ref(this.refString);
 }
 
 /*

@@ -18,18 +18,19 @@
         };
         firebase.initializeApp(config);
 
-        var db1 = new Database("test1/");
+        var db1 = new Database("test");
         db1.Update({
-            string : "test1"    
+            string : "child"    
         });
 
-        db1.ChangeReference("test1/child1");
+        db1.ChangeReference("test3");
+	db1.ChangeReference(db1.GetReference() + "child");
         db1.Update({
             string : "insideChild"    
         });
 
-        db1.ChangeReference("test1/");
-        db1.Query("test1",print);
+        db1.ChangeReference("test");
+        db1.Query("test",function(a) { alert(a);} );
         alert(db1.GetReference());
     </script>
     </div>
