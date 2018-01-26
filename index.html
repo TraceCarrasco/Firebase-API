@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script src="Database.js"></script>
+</head>
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAsmM1cpij6gTj3ZuIQIebsLr1njQUhJEM",
+            authDomain: "test-12a6f.firebaseapp.com",
+            databaseURL: "https://test-12a6f.firebaseio.com",
+            projectId: "test-12a6f",
+            storageBucket: "test-12a6f.appspot.com",
+            messagingSenderId: "633743438850"
+        };
+        firebase.initializeApp(config);
+
+        var db1 = new Database("test1/");
+        db1.Update({
+            string : "test1"    
+        });
+
+        db1.ChangeReference("test1/child1");
+        db1.Update({
+            string : "insideChild"    
+        });
+
+        db1.ChangeReference("test1/");
+        db1.Query("test1",print);
+        alert(db1.GetReference());
+    </script>
+    </div>
+</body>
+
+</html>
