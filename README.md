@@ -21,9 +21,9 @@ Queries the database given the current base reference, returns a collection.
 db.Query("test",function(a) { alert(a); });
 ```
 Returned collection might look something like this:
-{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string: "child"
-}
+<br />{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string: "child"
+<br />}
 ##### Database.GetReference
 ___
 Gets the refence of the current database
